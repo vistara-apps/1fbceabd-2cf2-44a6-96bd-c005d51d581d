@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Solana StreamCrafter",
+    "subtitle": "Built with Zara",
+    "description": "Solana StreamCrafter is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://1fbceabd2cf244a696bdc005d51d581d-bs9m.vercel.app",
+    "splashImageUrl": "https://1fbceabd2cf244a696bdc005d51d581d-bs9m.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://1fbceabd2cf244a696bdc005d51d581d-bs9m.vercel.app/image.png",
+    "tagline": "Solana StreamCrafter",
+    "screenshotUrls": [
+      "https://1fbceabd2cf244a696bdc005d51d581d-bs9m.vercel.app/screenshot.png",
+      "https://1fbceabd2cf244a696bdc005d51d581d-bs9m.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://1fbceabd2cf244a696bdc005d51d581d-bs9m.vercel.app/api/webhook"
+  }
+}
