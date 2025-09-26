@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Finance Theme - Professional Wall Street meets Crypto */
+  --color-bg: #0a0e1a;
+  --color-fg: #f8fafc;
+  --color-accent: #ffd700;
+  --color-primary: #1e40af;
+  --color-surface: #1e293b;
+  --color-border: #334155;
+  --color-muted: #64748b;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 32px;
+  
+  /* Shadows */
+  --shadow-card: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+  --shadow-modal: 0 10px 30px hsla(0, 0%, 0%, 0.4);
+}
+
+[data-theme="celo"] {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-accent: #fbcc5c;
+  --color-primary: #35d07f;
+  --color-surface: #1a1a1a;
+  --color-border: #333333;
+  --color-muted: #666666;
+}
+
+[data-theme="solana"] {
+  --color-bg: #1a0d2e;
+  --color-fg: #ffffff;
+  --color-accent: #9945ff;
+  --color-primary: #14f195;
+  --color-surface: #2d1b4e;
+  --color-border: #4c2a85;
+  --color-muted: #8b5fbf;
+}
+
+[data-theme="base"] {
+  --color-bg: #0f172a;
+  --color-fg: #f1f5f9;
+  --color-accent: #0052ff;
+  --color-primary: #3b82f6;
+  --color-surface: #1e293b;
+  --color-border: #334155;
+  --color-muted: #64748b;
+}
+
+[data-theme="coinbase"] {
+  --color-bg: #0c1426;
+  --color-fg: #f7fafc;
+  --color-accent: #0052ff;
+  --color-primary: #1652f0;
+  --color-surface: #1a202c;
+  --color-border: #2d3748;
+  --color-muted: #718096;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    background: linear-gradient(135deg, var(--color-bg) 0%, #1e293b 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface border border-border rounded-lg backdrop-blur-sm;
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(255, 215, 0, 0.2);
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-accent to-yellow-500 text-bg px-6 py-3 rounded-lg font-semibold hover:from-yellow-400 hover:to-accent transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface border border-accent text-accent px-6 py-3 rounded-lg font-semibold hover:bg-accent hover:text-bg transition-all duration-200;
+  }
+  
+  .metric-card {
+    @apply glass-card p-6 hover:bg-opacity-90 transition-all duration-200;
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
